@@ -1,87 +1,158 @@
-df <- read_csv("./GitHub/chen_twumasi_eisenbarth/data/merged_data.csv")
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(ggh4x)
+library(ggthemes)
+library(scales)
+library(extrafont)
+library(ggpubr)
+
+sapphire <- "#255F85"
+lapis <- "#26619c"
+classic_blue <- "#0F4C81"
+prussian <- "#293E66"
+rainy_day <- "#474C5c"
+glossy_grape <- "#A799B7"
+raspberry <- "#C33149"
+saffron <- "#F49D37"
+dark_violet <- "#351C45"
+dark_magenta <- "#861B54"
+dark_emerald <- "#1F7A69"
+satin <- "#D65C70"
+onyx <- "#383C42"
+rhythm <- "#6E758E"
+
+df <- read_csv("./data/merged_data.csv")
 
 df <- mutate(df, region = if_else(country == "Cote d'Ivoire", "Sub-Saharan Africa", region))
-
-th <- theme_clean() +
-  theme(
-    panel.grid.major.x = element_blank(),
-    panel.grid.major.y = element_blank(),
-    panel.grid.minor.x = element_blank(),
-    panel.grid.minor.y = element_blank(),
-    legend.background = element_rect(color = NA),
-    legend.position = "bottom",
-    axis.line = element_line(size = 0.25, colour = "darkgrey"),
-    legend.title = element_text(size = 10, face = "plain"),
-    text = element_text(family = "Roboto"),
-    plot.background = element_rect(fill = "transparent", color = NA),
-    axis.ticks.length = unit(.35, "cm")
-  )
-
-ggplot(df, aes(x = pvd,
-               y = cg,
-               size  = pop, 
-               color = factor(region))) +
-  geom_jitter() +
-  scale_size_continuous(range = c(1, 15),
-                        labels = comma_format(),
-                        breaks = c(5e6, 5e7, 1e8, 1e9)) +
-  th +
-  guides(size = guide_legend(override.aes = list(color = spanish_pink))) +
-  scale_x_continuous(guide = "axis_minor", labels = percent_format()) +
-  scale_y_continuous(guide = "axis_minor", labels = percent_format()) +
-  scale_color_manual(values = c(grape, raspberry, azure, prussian, dark_emerald, sugar_plum, spanish_blue, spanish_pink)) +
-  labs(y = "Total government debt\n",
-       x = "\nPrivate sector debt",
-       fill = "",
-       color = "",
-       size = "Population"
+df <-
+  mutate(df, lmh = str_to_title(lmh) %>% factor(
+    .,
+    levels = c(
+      "Low Income",
+      "Lower-Middle Income",
+      "Upper-Middle Income",
+      "High Income"
     )
+  ))
 
-ggplot(
-  df %>% group_by(country) %>% summarize(
-    pvd = mean(pvd, na.rm = TRUE),
-    cg = mean(cg, na.rm = TRUE),
-    pop = max(pop, na.rm = TRUE)
-  ),
-  aes(x = pvd,
-      y = cg,
-      size  = pop)
-) +
-  geom_jitter(color = sapphire) +
+unique(df$lmh)
+
+defacto <- readxl::read_xlsx("./data/defacto_regimes.xlsx")
+dejure <- readxl::read_xlsx("./data/dejure_regimes.xlsx")
+
+theme_clean <- function(...) {
+  ggpubr::theme_classic2() +
+    theme(
+      panel.grid.major.x = element_blank(),
+      panel.grid.major.y = element_blank(),
+      panel.grid.minor.x = element_blank(),
+      panel.grid.minor.y = element_blank(),
+      legend.background = element_rect(fill = "transparent", color = NA),
+      legend.position = "bottom",
+      plot.caption = element_text(hjust = 1),
+      panel.border = element_blank(),
+      axis.line = element_line(linewidth = 0.15, colour = onyx),
+      legend.title = element_text(size = 10, face = "plain"),
+      legend.key = element_rect(fill = NA, color = NA),
+      text = element_text(color = onyx, family = "Arial Narrow", size = 10),
+      strip.background = element_rect(color = NA),
+      plot.background = element_rect(color = NA),
+      axis.ticks.length = unit(0.5, "cm"),
+      axis.ticks = element_line(linewidth = 0.15)
+    )
+}
+
+# grid style ggplot theme
+theme_grid <- function(...) {
+  theme_light() +
+    theme(
+      legend.background = element_rect(color = NA),
+      legend.position = "bottom",
+      legend.key = element_rect(fill = NA),
+      panel.border = element_blank(),
+      legend.title = element_text(size = 10, face = "plain"),
+      text = element_text(family = "Franklin Gothic Book", color = charcoal),
+      plot.background = element_rect(fill = "transparent", color = NA),
+      strip.background = element_rect(fill = "transparent", color = NA),
+      strip.text = element_text(colour = 'black')
+    )
+}
+
+ggplot(df, aes(
+  x = pvd,
+  y = cg,
+  size  = pop,
+  color = factor(region)
+)) +
+  geom_jitter() +
   scale_size_continuous(
     range = c(1, 15),
     labels = comma_format(),
     breaks = c(5e6, 5e7, 1e8, 1e9)
   ) +
-  th +
+  theme_clean() +
+  guides(size = guide_legend(override.aes = list(color = glossy_grape), nrow = 2)) +
   scale_x_continuous(guide = "axis_minor", labels = percent_format()) +
   scale_y_continuous(guide = "axis_minor", labels = percent_format()) +
-  scale_color_manual(values = c(grape, raspberry, prussian)) +
+  labs(
+    y = "Total government debt\n",
+    x = "\nPrivate sector debt",
+    fill = "",
+    color = "",
+    size = "Population"
+  )
+
+
+df %>% group_by(country, lmh) %>% summarize(
+  pvd = mean(pvd, na.rm = TRUE),
+  cg = mean(cg, na.rm = TRUE),
+  pop = max(pop, na.rm = TRUE)
+) %>%
+  ggplot(aes(
+    x = pvd,
+    y = cg,
+    size  = pop,
+    color = lmh
+  )) +
+  geom_jitter() +
+  scale_size_continuous(
+    range = c(1, 15),
+    labels = comma_format(),
+    breaks = c(5e6, 5e7, 1e8, 1e9)
+  ) +
+  theme_clean() +
+  guides(size = guide_legend(override.aes = list(color = lapis), nrow = 2)) +
+  scale_x_continuous(guide = "axis_minor", labels = percent_format()) +
+  scale_y_continuous(guide = "axis_minor", labels = percent_format()) +
+  scale_color_manual(values = wesanderson::wes_palette("AsteroidCity3")) +
   labs(y = "Total government debt\n",
        x = "\nPrivate sector debt",
        fill = "",
        size = "Population")
 
 ggplot(
-  df %>% group_by(country) %>% summarize(
+  df %>% group_by(country, lmh) %>% summarize(
     rgdpo = mean(rgdpo, na.rm = TRUE),
     cg = mean(cg, na.rm = TRUE),
     pop = max(pop, na.rm = TRUE)
   ),
   aes(x = rgdpo,
       y = cg,
-      size  = pop, )
+      size  = pop,
+      color = lmh)
 ) +
-  geom_jitter(color = sapphire) +
+  geom_jitter() +
   scale_size_continuous(
     range = c(1, 15),
     labels = comma_format(),
     breaks = c(5e6, 5e7, 1e8, 1e9)
   ) +
-  th +
+  theme_clean() +
+  guides(size = guide_legend(override.aes = list(color = lapis), nrow = 2)) +
   scale_x_log10(guide = "axis_minor", labels = dollar_format()) +
   scale_y_continuous(guide = "axis_minor", labels = percent_format()) +
-  scale_color_manual(values = c(grape, raspberry, prussian)) +
+  scale_color_manual(values = wesanderson::wes_palette("AsteroidCity3")) +
   labs(y = "Total government debt\n",
        x = "\nPrivate sector debt",
        fill = "",
@@ -105,9 +176,9 @@ ggplot(
     labels = comma_format(),
     breaks = c(5e6, 5e7, 1e8, 1e9)
   ) +
-  th +
-  guides(size = NULL) +
-  scale_color_manual(values = c(grape, dark_emerald, raspberry, sapphire)) +
+  theme_clean() +
+  guides(size = guide_legend(override.aes = list(color = lapis), nrow = 2)) +
+  scale_color_manual(values = wesanderson::wes_palette(name = "AsteroidCity1")) +
   scale_x_continuous(guide = "axis_minor", labels = percent_format()) +
   scale_y_continuous(guide = "axis_minor", labels = percent_format()) +
   labs(y = "Total government debt\n",
@@ -133,10 +204,10 @@ ggplot(
     labels = comma_format(),
     breaks = c(5e6, 5e7, 1e8, 1e9)
   ) +
-  th +
-  guides(size = guide_legend(override.aes = list(color = lilac), nrow = 2)) +
+  theme_clean() +
+  guides(size = guide_legend(override.aes = list(color = glossy_grape), nrow = 2)) +
   scale_y_continuous(guide = "axis_minor", labels = percent_format()) +
-  scale_color_manual(values = c(rain_day, dark_emerald, raspberry, sapphire)) +
+  scale_color_manual(values = wesanderson::wes_palette("AsteroidCity1")) +
   labs(
     y = "Total government debt\n",
     x = "",
@@ -146,29 +217,3 @@ ggplot(
   )
 
 
-ggplot(
-  df %>% group_by(country, lmh) %>% summarize(
-    life_exp = mean(life_exp, na.rm = TRUE),
-    gni = mean(real_gni, na.rm = TRUE),
-    pop = max(pop, na.rm = TRUE)
-  ),
-  aes(x = gni,
-      y = life_exp,
-      color = lmh,
-      size  = pop)
-) +
-  geom_jitter() +
-  scale_size_continuous(
-    range = c(1, 15),
-    labels = comma_format(),
-    breaks = c(5e6, 5e7, 1e8, 1e9)
-  ) +
-  th +
-  guides(size = guide_legend(override.aes = list(color = lilac), nrow = 2)) +
-  scale_color_manual(values = c(grape, dark_emerald, raspberry, sapphire)) +
-  scale_x_log10(guide = "axis_minor", labels = dollar_format()) +
-  scale_y_continuous(guide = "axis_minor", labels = number_format(), limits = c(40, 80)) +
-  labs(y = "Life expectancy\n",
-       x = "\nGDP-per-capita",
-       color = "",
-       size = "Population")
