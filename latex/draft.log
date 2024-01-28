@@ -1,34 +1,34 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.2.4)  5 MAR 2023 21:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.12.12)  21 JAN 2024 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./draft.tex
 (draft.tex
-LaTeX2e <2022-06-01> patch level 5
-L3 programming layer <2022-09-28>
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
-File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-\c@figure=\count191
-\c@table=\count192
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
-\bibindent=\dimen138
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
+\KV@toks@=\toks17
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
@@ -36,40 +36,40 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count193
-\Gm@cntv=\count194
-\c@Gm@tempcnt=\count195
-\Gm@bindingoffset=\dimen139
-\Gm@wd@mp=\dimen140
-\Gm@odd@mp=\dimen141
-\Gm@even@mp=\dimen142
-\Gm@layoutwidth=\dimen143
-\Gm@layoutheight=\dimen144
-\Gm@layouthoffset=\dimen145
-\Gm@layoutvoffset=\dimen146
-\Gm@dimlist=\toks17
+\Gm@cnth=\count194
+\Gm@cntv=\count195
+\c@Gm@tempcnt=\count196
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks18
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/preprint\authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
-\affilsep=\skip49
-\@affilsep=\skip50
-\c@Maxaffil=\count196
-\c@authors=\count197
-\c@affil=\count198
+\affilsep=\skip50
+\@affilsep=\skip51
+\c@Maxaffil=\count197
+\c@authors=\count198
+\c@affil=\count199
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip51
-\f@nch@O@elh=\skip52
-\f@nch@O@erh=\skip53
-\f@nch@O@olh=\skip54
-\f@nch@O@orh=\skip55
-\f@nch@O@elf=\skip56
-\f@nch@O@erf=\skip57
-\f@nch@O@olf=\skip58
-\f@nch@O@orf=\skip59
+\f@nch@headwidth=\skip52
+\f@nch@O@elh=\skip53
+\f@nch@O@erh=\skip54
+\f@nch@O@olh=\skip55
+\f@nch@O@orh=\skip56
+\f@nch@O@elf=\skip57
+\f@nch@O@erf=\skip58
+\f@nch@O@olf=\skip59
+\f@nch@O@orf=\skip60
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -89,10 +89,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks18
-\XKV@tempa@toks=\toks19
+\XKV@toks=\toks19
+\XKV@tempa@toks=\toks20
 )
-\XKV@depth=\count199
+\XKV@depth=\count266
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
@@ -121,22 +121,22 @@ Package: nimbusserif 2019/10/18 v1.012
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ))
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
-Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
-Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen147
-\captionmargin=\dimen148
-\caption@leftmargin=\dimen149
-\caption@rightmargin=\dimen150
-\caption@width=\dimen151
-\caption@indent=\dimen152
-\caption@parindent=\dimen153
-\caption@hangindent=\dimen154
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen149
+\captionmargin=\dimen150
+\caption@leftmargin=\dimen151
+\caption@rightmargin=\dimen152
+\caption@width=\dimen153
+\caption@indent=\dimen154
+\caption@parindent=\dimen155
+\caption@hangindent=\dimen156
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count266
-\c@continuedfloat=\count267
+\c@caption@flags=\count267
+\c@continuedfloat=\count268
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -155,21 +155,19 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-\stockwidth=\dimen155
-\stockheight=\dimen156
 ))
 \Gin@req@height=\dimen157
 \Gin@req@width=\dimen158
 ) (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2022/04/08 v2.17n AMS math features
-\@mathmargin=\skip60
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip61
 For additional information on amsmath, use the `?' option.
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks20
+\@emptytoks=\toks21
 \ex@=\dimen159
 ))
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
@@ -179,14 +177,14 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count268
+\inf@bad=\count269
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count269
-\leftroot@=\count270
+\uproot@=\count270
+\leftroot@=\count271
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count271
-\DOTSCASE@=\count272
+\classnum@=\count272
+\DOTSCASE@=\count273
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -199,31 +197,31 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen161
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count273
+\macc@depth=\count274
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count274
+\c@MaxMatrixCols=\count275
 \dotsspace@=\muskip16
-\c@parentequation=\count275
-\dspbrk@lvl=\count276
-\tag@help=\toks21
-\row@=\count277
-\column@=\count278
-\maxfields@=\count279
-\andhelp@=\toks22
+\c@parentequation=\count276
+\dspbrk@lvl=\count277
+\tag@help=\toks22
+\row@=\count278
+\column@=\count279
+\maxfields@=\count280
+\andhelp@=\toks23
 \eqnshift@=\dimen162
 \alignsep@=\dimen163
 \tagshift@=\dimen164
 \tagwidth@=\dimen165
 \totwidth@=\dimen166
 \lineht@=\dimen167
-\@envbody=\toks23
-\multlinegap=\skip61
-\multlinetaggap=\skip62
-\mathdisplay@stack=\toks24
+\@envbody=\toks24
+\multlinegap=\skip62
+\multlinetaggap=\skip63
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
@@ -247,12 +245,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen175
 \cmidrulekern=\dimen176
 \defaultaddspace=\dimen177
-\@cmidla=\count280
-\@cmidlb=\count281
+\@cmidla=\count281
+\@cmidlb=\count282
 \@aboverulesep=\dimen178
 \@belowrulesep=\dimen179
-\@thisruleclass=\count282
-\@lastruleclass=\count283
+\@thisruleclass=\count283
+\@lastruleclass=\count284
 \@thisrulewidth=\dimen180
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/threeparttable\threepar
@@ -261,9 +259,11 @@ Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box53
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
-Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
-\c@subfigure=\count284
-\c@subtable=\count285
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count285
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count286
 ) (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/textpos\textpos.sty
 Package: textpos 2022/07/23 v1.10.1
 Package textpos Info: choosing support for LaTeX3 on input line 60.
@@ -275,72 +275,60 @@ Package textpos Info: choosing support for LaTeX3 on input line 60.
 
 Grid set 16 x 16 = 38.39343pt x 49.68562pt
 \TPboxrulesize=\dimen185
-\TP@tbargs=\toks25
+\TP@tbargs=\toks26
 ) (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count286
-\rotFPtop=\skip63
-\rotFPbot=\skip64
+\c@r@tfl@t=\count287
+\rotFPtop=\skip64
+\rotFPbot=\skip65
 \rot@float@box=\box55
-\rot@mess@toks=\toks26
+\rot@mess@toks=\toks27
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
-Package: ragged2e 2021/12/15 v3.1 ragged2e Package
-\CenteringLeftskip=\skip65
-\RaggedLeftLeftskip=\skip66
-\RaggedRightLeftskip=\skip67
-\CenteringRightskip=\skip68
-\RaggedLeftRightskip=\skip69
-\RaggedRightRightskip=\skip70
-\CenteringParfillskip=\skip71
-\RaggedLeftParfillskip=\skip72
-\RaggedRightParfillskip=\skip73
-\JustifyingParfillskip=\skip74
-\CenteringParindent=\skip75
-\RaggedLeftParindent=\skip76
-\RaggedRightParindent=\skip77
-\JustifyingParindent=\skip78
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip66
+\RaggedLeftLeftskip=\skip67
+\RaggedRightLeftskip=\skip68
+\CenteringRightskip=\skip69
+\RaggedLeftRightskip=\skip70
+\RaggedRightRightskip=\skip71
+\CenteringParfillskip=\skip72
+\RaggedLeftParfillskip=\skip73
+\RaggedRightParfillskip=\skip74
+\JustifyingParfillskip=\skip75
+\CenteringParindent=\skip76
+\RaggedLeftParindent=\skip77
+\RaggedRightParindent=\skip78
+\JustifyingParindent=\skip79
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
-Package: titlesec 2021/07/05 v2.14 Sectioning titles
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ttl@box=\box56
-\beforetitleunit=\skip79
-\aftertitleunit=\skip80
+\beforetitleunit=\skip80
+\aftertitleunit=\skip81
 \ttl@plus=\dimen186
 \ttl@minus=\dimen187
-\ttl@toksa=\toks27
+\ttl@toksa=\toks28
 \titlewidth=\dimen188
 \titlewidthlast=\dimen189
 \titlewidthfirst=\dimen190
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip81
-\bibsep=\skip82
+\bibhang=\skip82
+\bibsep=\skip83
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count287
+\c@NAT@ctr=\count288
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2022-09-22 v7.00t Hypertext links for LaTeX
-
-(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
+Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
 ty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
@@ -352,7 +340,19 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
 ty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-) (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+
+(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
@@ -363,7 +363,7 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
@@ -375,42 +375,46 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count288
+\c@section@level=\count289
+)
+(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count290
 )
 \@linkdim=\dimen191
-\Hy@linkcounter=\count289
-\Hy@pagecounter=\count290
- (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2022-09-22 v7.00t Hyperref: PDFDocEncoding definition (HO)
+\Hy@linkcounter=\count291
+\Hy@pagecounter=\count292
+
+(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-) (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+)
+(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-\Hy@SavedSpaceFactor=\count291
- (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2022-09-22 v7.00t Hyperref: PDF Unicode definition (HO)
+\Hy@SavedSpaceFactor=\count293
+
+(C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4045.
-Package hyperref Info: Hyper figures OFF on input line 4162.
-Package hyperref Info: Link nesting OFF on input line 4167.
-Package hyperref Info: Hyper index ON on input line 4170.
-Package hyperref Info: Plain pages OFF on input line 4177.
-Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4064.
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4410.
-\c@Hy@tempcnt=\count292
+Package hyperref Info: Bookmarks ON on input line 4448.
+\c@Hy@tempcnt=\count294
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4748.
+LaTeX Info: Redefining \url on input line 4786.
 \XeTeXLinkMargin=\dimen192
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
@@ -421,36 +425,36 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count293
+\Fld@menulength=\count295
 \Field@Width=\dimen193
 \Fld@charsize=\dimen194
-Package hyperref Info: Hyper figures OFF on input line 6027.
-Package hyperref Info: Link nesting OFF on input line 6032.
-Package hyperref Info: Hyper index ON on input line 6035.
-Package hyperref Info: backreferencing OFF on input line 6042.
-Package hyperref Info: Link coloring ON on input line 6045.
-Package hyperref Info: Link coloring with OCG OFF on input line 6052.
-Package hyperref Info: PDF/A mode OFF on input line 6057.
+Package hyperref Info: Hyper figures OFF on input line 6065.
+Package hyperref Info: Link nesting OFF on input line 6070.
+Package hyperref Info: Hyper index ON on input line 6073.
+Package hyperref Info: backreferencing OFF on input line 6080.
+Package hyperref Info: Link coloring ON on input line 6083.
+Package hyperref Info: Link coloring with OCG OFF on input line 6090.
+Package hyperref Info: PDF/A mode OFF on input line 6095.
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count294
-\c@Item=\count295
-\c@Hfootnote=\count296
+\Hy@abspage=\count296
+\c@Item=\count297
+\c@Hfootnote=\count298
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2022-09-22 v7.00t Hyperref driver for pdfTeX
+File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count297
-\c@bookmark@seq@number=\count298
+\Fld@listcount=\count299
+\c@bookmark@seq@number=\count300
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
@@ -463,7 +467,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip83
+\Hy@SectionHShift=\skip84
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
 Package: relsize 2013/03/29 ver 4.1
@@ -472,71 +476,71 @@ Package: relsize 2013/03/29 ver 4.1
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
-Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
-\FN@temptoken=\toks28
+Package: footmisc 2023/07/05 v6.0f a miscellany of footnote facilities
+\FN@temptoken=\toks29
 \footnotemargin=\dimen195
 \@outputbox@depth=\dimen196
-Package footmisc Info: Declaring symbol style bringhurst on input line 695.
-Package footmisc Info: Declaring symbol style chicago on input line 703.
-Package footmisc Info: Declaring symbol style wiley on input line 712.
-Package footmisc Info: Declaring symbol style lamport-robust on input line 723.
+Package footmisc Info: Declaring symbol style bringhurst on input line 696.
+Package footmisc Info: Declaring symbol style chicago on input line 704.
+Package footmisc Info: Declaring symbol style wiley on input line 713.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 724.
 
-Package footmisc Info: Declaring symbol style lamport* on input line 743.
-Package footmisc Info: Declaring symbol style lamport*-robust on input line 764
+Package footmisc Info: Declaring symbol style lamport* on input line 744.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 765
 .
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip84
-\thanksmargin=\skip85
-\droptitle=\skip86
+\thanksmarkwidth=\skip85
+\thanksmargin=\skip86
+\droptitle=\skip87
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/floatrow\floatrow.sty
 Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
-\c@float@type=\count299
-\float@exts=\toks29
+\c@float@type=\count301
+\float@exts=\toks30
 \float@box=\box57
 \@floatcapt=\box58
 Package floatrow Info: Modified float package code loaded on input line 455.
 Package floatrow Info: Modified rotfloat package code loaded on input line 473.
 
-\FR@everyfloat=\toks30
+\FR@everyfloat=\toks31
 \flrow@foot=\insert252
 \FB@wd=\dimen197
 \FBo@wd=\dimen198
 \FBc@wd=\dimen199
-\FBo@ht=\skip87
-\FBc@ht=\skip88
-\FBf@ht=\skip89
-\FBo@max=\skip90
-\FBc@max=\skip91
-\FBf@max=\skip92
-\c@FBl@b=\count300
-\floatbox@depth=\count301
-\c@FRobj=\count302
-\c@FRsobj=\count303
-\Xhsize=\skip93
-\sXhsize=\skip94
-\Zhsize=\skip95
-\sZhsize=\skip96
+\FBo@ht=\skip88
+\FBc@ht=\skip89
+\FBf@ht=\skip90
+\FBo@max=\skip91
+\FBc@max=\skip92
+\FBf@max=\skip93
+\c@FBl@b=\count302
+\floatbox@depth=\count303
+\c@FRobj=\count304
+\c@FRsobj=\count305
+\Xhsize=\skip94
+\sXhsize=\skip95
+\Zhsize=\skip96
+\sZhsize=\skip97
 \flrow@rowbox=\box59
 \FR@Zunitlength=\dimen256
-\c@FBcnt=\count304
-\FPOScnt=\count305
-\LTleft=\skip97
-\LTright=\skip98
-\LTleft=\skip99
-\LTright=\skip100
-\flrow@types=\toks31
+\c@FBcnt=\count306
+\FPOScnt=\count307
+\LTleft=\skip98
+\LTright=\skip99
+\LTleft=\skip100
+\LTright=\skip101
+\flrow@types=\toks32
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip101
+\labelindent=\skip102
 \enit@outerparindent=\dimen257
-\enit@toks=\toks32
+\enit@toks=\toks33
 \enit@inbox=\box60
-\enit@count@id=\count306
-\enitdp@description=\count307
+\enit@count@id=\count308
+\enitdp@description=\count309
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/sectsty\sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
@@ -564,8 +568,8 @@ LaTeX Font Info:    Font shape `T1/NimbusSerif/m/n' will be
 
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
-File: l3backend-pdftex.def 2022-09-28 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count308
+File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count310
 \l__pdf_internal_box=\box61
 ) (draft.aux)
 \openout1 = `draft.aux'.
@@ -623,10 +627,11 @@ LaTeX Font Info:    ... okay on input line 73.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count309
-\c@mv@boldtabular=\count310
+\c@mv@tabular=\count311
+\c@mv@boldtabular=\count312
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: floatrow package is loaded.
 Package caption Info: floatrow package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: rotating package is loaded.
@@ -636,17 +641,17 @@ Package caption Info: End \AtBeginDocument code.
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count311
+\scratchcounter=\count313
 \scratchdimen=\dimen258
 \scratchbox=\box62
-\nofMPsegments=\count312
-\nofMParguments=\count313
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count314
+\nofMPsegments=\count314
+\nofMParguments=\count315
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count316
 \MPscratchDim=\dimen259
-\MPnumerator=\count315
-\makeMPintoPDFobject=\count316
-\everyMPtoPDFconversion=\toks34
+\MPnumerator=\count317
+\makeMPintoPDFobject=\count318
+\everyMPtoPDFconversion=\toks35
 )
 (C:\Users\ageis\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -706,7 +711,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
 [1
 
-{C:/Users/ageis/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+{C:/Users/ageis/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/agei
+s/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/roboto/rbto_b5rac7.enc}{C:/User
+s/ageis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/nimbus15/nimbus15-ec.enc}
+]
 LaTeX Font Info:    Font shape `T1/NimbusSerif/m/n' will be
 (Font)              scaled to size 17.28pt on input line 99.
 LaTeX Font Info:    Font shape `T1/NimbusSerif/b/n' will be
@@ -769,6 +777,11 @@ LaTeX Font Info:    Font shape `T1/NimbusSerif/m/sc' will be
 [10
 
 ]) [11] (draft.aux)
+ ***********
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+ ***********
+
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -776,26 +789,23 @@ Package rerunfilecheck Info: File `draft.out' has not changed.
 (rerunfilecheck)             Checksum: 1823DF7979E4BD97C1411738C8B16983;1014.
  ) 
 Here is how much of TeX's memory you used:
- 14808 strings out of 475381
- 247337 string characters out of 5776864
- 590584 words of memory out of 5000000
- 35898 multiletter control sequences out of 15000+600000
- 524793 words of font info for 63 fonts, out of 8000000 for 9000
+ 14984 strings out of 474587
+ 244542 string characters out of 5745701
+ 1942558 words of memory out of 5000000
+ 36876 multiletter control sequences out of 15000+600000
+ 613603 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,117p,1678b,614s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{C:/Users/ageis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/nimbus15/nimbus
-15-ec.enc}{C:/Users/ageis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/roboto/
-rbto_b5rac7.enc}<C:/Users/ageis/AppData/Local/Programs/MiKTeX/fonts/type1/googl
-e/roboto/Roboto-Regular.pfb><C:/Users/ageis/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ageis/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ageis/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ageis/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ageis/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/nimbus15/ztm-Med.pfb><C:/Users/
-ageis/AppData/Local/Programs/MiKTeX/fonts/type1/public/nimbus15/ztm-Reg.pfb><C:
-/Users/ageis/AppData/Local/Programs/MiKTeX/fonts/type1/public/nimbus15/ztm-RegI
-ta.pfb>
-Output written on draft.pdf (13 pages, 253433 bytes).
+ 75i,6n,117p,1678b,619s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/ageis/AppData/Local/Programs/MiKTeX/fonts/type1/google/roboto/Robot
+o-Regular.pfb><C:/Users/ageis/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb><C:/Users/ageis/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><C:/Users/ageis/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ageis/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ageis/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/nimbus15/ztm-Med.pfb><C:/Users/ageis/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/nimbus15/ztm-Reg.pfb><C:/Users/ageis/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/nimbus15/ztm-RegIta.pfb>
+Output written on draft.pdf (13 pages, 253495 bytes).
 PDF statistics:
  261 PDF objects out of 1000 (max. 8388607)
  48 named destinations out of 1000 (max. 500000)

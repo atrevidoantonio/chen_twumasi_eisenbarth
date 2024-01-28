@@ -19,30 +19,33 @@ wb <- filter(
     "NE.GDI.TOTL.ZS",
     "NE.IMP.GNFS.ZS",
     "SP.POP.TOTL",
-    "EG.USE.ELEC.KH.PC", 
+    "EG.USE.ELEC.KH.PC",
     "EG.USE.PCAP.KG.OE",
     "NY.GDP.MKTP.CD",
     "NY.GDP.DEFL.KD.ZG",
     "MS.MIL.XPND.GD.ZS"
   )
-) 
-  mutate(series_name = case_when(
-                                 series_code == "FS.AST.DOMS.GD.ZS" ~ "domestic_credit", 
-                                 series_code == "NY.GDP.MKTP.CD" ~ "gdp_us",
-                                 series_code == "NY.GDP.MKTP.KD.ZG" ~ "gdp_growth",
-                                 series_code == "NY.GNP.PCAP.CD" ~ "gni", 
-                                 series_code == "SP.POP.TOTL" ~ "population",
-                                 series_code == "SP.DYN.TFRT.IN" ~ "fertility", 
-                                 series_code == "SP.DYN.LE00.IN" ~ "life_exp",
-                                 series_code == "NE.EXP.GNFS.ZS" ~ "exports",
-                                 series_code == "NE.IMP.GNFS.ZS" ~ "imports",
-                                 series_code == "NE.GDI.TOTL.ZS" ~ "capital",
-                                 series_code == "NY.GDP.DEFL.KD.ZG" ~ "inflation",
-                                 series_code == "EN.ATM.CO2E.PC" ~ "emissions", 
-                                 series_code == "EG.USE.ELEC.KH.PC" ~ "electricty_use", 
-                                 series_code == "EG.USE.PCAP.KG.OE" ~"oil_use",
-                                 series_code == "MS.MIL.XPND.GD.ZS" ~ "military_exp"
-                                 ))
+) |>
+  mutate(
+    series_name = case_when(
+      series_code == "FS.AST.DOMS.GD.ZS" ~ "domestic_credit",
+      series_code == "NY.GDP.MKTP.CD" ~ "gdp_us",
+      series_code == "NY.GDP.MKTP.KD.ZG" ~ "gdp_growth",
+      series_code == "NY.GNP.PCAP.CD" ~ "gni",
+      series_code == "SP.POP.TOTL" ~ "population",
+      series_code == "SP.DYN.TFRT.IN" ~ "fertility",
+      series_code == "SP.DYN.LE00.IN" ~ "life_exp",
+      series_code == "NE.EXP.GNFS.ZS" ~ "exports",
+      series_code == "NE.IMP.GNFS.ZS" ~ "imports",
+      series_code == "NE.GDI.TOTL.ZS" ~ "capital",
+      series_code == "NY.GDP.DEFL.KD.ZG" ~ "inflation",
+      series_code == "EN.ATM.CO2E.PC" ~ "emissions",
+      series_code == "EG.USE.ELEC.KH.PC" ~ "electricty_use",
+      series_code == "EG.USE.PCAP.KG.OE" ~ "oil_use",
+      series_code == "MS.MIL.XPND.GD.ZS" ~ "military_exp"
+    )
+  )
+
 wb <- wb %>%
   dplyr::select(country = country_name,
                 country_code, 
@@ -80,7 +83,6 @@ wb_data <- rename(wb, countrycode = country_code) %>%
   
 write_csv(wb, "wb_data_compiled.csv")
 
-
 wid_data <- read_csv("./data/wid_data.csv") %>%
   dplyr::select(country, variable, year, value) %>%
   pivot_wider(names_from = "variable") %>% 
@@ -117,4 +119,8 @@ wid_wb <-
   relocate(year, countrycode, country) %>%
   dplyr::select(-country)
 
-write_csv(wid_wb, "./GitHub/chen_twumasi_eisenbarth/data/wid_wb_compiled.csv")
+wb_classes |>
+  mutate(group = paste0(region, " ", income_group)) |>
+  distinct(group)
+
+write_csv(wid_wb, "./data/wid_wb_compiled.csv")

@@ -21,11 +21,11 @@ df <- read_csv("./data/merged_debt.csv") %>%
 incomes <- 
   group_by(df, country) %>%
   summarize(gni = mean(gni, na.rm = TRUE)) %>%
-  mutate(incomes, 
-         lmh = case_when(gni <= 1045 ~ "Low income",
-                         gni >= 1046 & gni <= 4095 ~ "Lower-Middle Income",
-                         gni >= 4096 & gni <= 12695 ~ "Upper-Middle Income",
-                         gni >= 12696 ~ "High Income")) %>% 
+  mutate(
+    lmh = case_when(gni <= 1045 ~ "Low income",
+                    gni >= 1046 & gni <= 4095 ~ "Lower-Middle Income",
+                    gni >= 4096 & gni <= 12695 ~ "Upper-Middle Income",
+                    gni >= 12696 ~ "High Income")) %>% 
   mutate(lmh = if_else(country == "Taiwan", "High Income", lmh)) %>%
   dplyr::select(country, lmh)
 
@@ -73,4 +73,4 @@ df <- mutate(df, country = factor(country)) %>%
   relocate(european_union, .after = region)
 
 #' save final dataset
-write_csv(df, "./GitHub/chen_twumasi_eisenbarth/data/merged_data.csv")
+write_csv(df, "./data/merged_data.csv")

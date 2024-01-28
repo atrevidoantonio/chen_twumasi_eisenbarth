@@ -22,9 +22,17 @@ satin <- "#D65C70"
 onyx <- "#383C42"
 rhythm <- "#6E758E"
 
+
+wb_classes <- read_csv("./data/wb_classes.csv") |> janitor::clean_names() |>
+  select(-economy)
+
+countrycodes |>
+  left_join(wb_classes, by = join_by(countrycode == code))
+
 df <- read_csv("./data/merged_data.csv")
 
 df <- mutate(df, region = if_else(country == "Cote d'Ivoire", "Sub-Saharan Africa", region))
+
 df <-
   mutate(df, lmh = str_to_title(lmh) %>% factor(
     .,
@@ -36,7 +44,6 @@ df <-
     )
   ))
 
-unique(df$lmh)
 
 defacto <- readxl::read_xlsx("./data/defacto_regimes.xlsx")
 dejure <- readxl::read_xlsx("./data/dejure_regimes.xlsx")
@@ -52,13 +59,13 @@ theme_clean <- function(...) {
       legend.position = "bottom",
       plot.caption = element_text(hjust = 1),
       panel.border = element_blank(),
-      axis.line = element_line(linewidth = 0.15, colour = onyx),
+      axis.line = element_line(linewidth = 0.25, colour = "black"),
       legend.title = element_text(size = 10, face = "plain"),
       legend.key = element_rect(fill = NA, color = NA),
-      text = element_text(color = onyx, family = "Arial Narrow", size = 10),
+      text = element_text(color = "black", family = "Arial Narrow", size = 10),
       strip.background = element_rect(color = NA),
       plot.background = element_rect(color = NA),
-      axis.ticks.length = unit(0.5, "cm"),
+      axis.ticks.length = unit(0.20, "cm"),
       axis.ticks = element_line(linewidth = 0.15)
     )
 }
@@ -72,7 +79,7 @@ theme_grid <- function(...) {
       legend.key = element_rect(fill = NA),
       panel.border = element_blank(),
       legend.title = element_text(size = 10, face = "plain"),
-      text = element_text(family = "Franklin Gothic Book", color = charcoal),
+      text = element_text(family = "Franklin Gothic Book", color = "darkgrey"),
       plot.background = element_rect(fill = "transparent", color = NA),
       strip.background = element_rect(fill = "transparent", color = NA),
       strip.text = element_text(colour = 'black')
