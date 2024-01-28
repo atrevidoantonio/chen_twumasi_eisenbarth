@@ -22,9 +22,17 @@ satin <- "#D65C70"
 onyx <- "#383C42"
 rhythm <- "#6E758E"
 
+
+wb_classes <- read_csv("./data/wb_classes.csv") |> janitor::clean_names() |>
+  select(-economy)
+
+countrycodes |>
+  left_join(wb_classes, by = join_by(countrycode == code))
+
 df <- read_csv("./data/merged_data.csv")
 
 df <- mutate(df, region = if_else(country == "Cote d'Ivoire", "Sub-Saharan Africa", region))
+
 df <-
   mutate(df, lmh = str_to_title(lmh) %>% factor(
     .,
@@ -36,7 +44,6 @@ df <-
     )
   ))
 
-unique(df$lmh)
 
 defacto <- readxl::read_xlsx("./data/defacto_regimes.xlsx")
 dejure <- readxl::read_xlsx("./data/dejure_regimes.xlsx")

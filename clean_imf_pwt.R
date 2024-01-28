@@ -4,12 +4,12 @@ library(purrr)
 library(readr)
 
 #' load in global debt data from IMF
-ggd <- haven::read_dta("./data/imf_gdd.dta") %>% haven::zap_labels() %>%
+ggd <- haven::read_dta("./data/imf_debt_data.dta") %>% haven::zap_labels() %>%
   select(ifscode, year, country, pvd = pvd_all, hhd = hh_all, gg, cg, gdp = ngdp) %>%
   mutate(across(c(4:7), ~ .x/100))
 #' fix strings on country column, we will use this column to merge 
 #' and match codes between Penn World Tables and the IMF dataset
-ggd <- 
+ggd <-
   #' change ampersands to "and"
   mutate(ggd, country = gsub("&", "and", country)) %>%
   mutate(
@@ -21,11 +21,12 @@ ggd <-
       country == "Kyrgyz Republic" ~ "Kyrgyzstan",
       country == "São Tomé and Príncipe" ~ "Sao Tome and Principe",
       country == "Slovak Republic" ~ "Slovakia",
+      country == "Korea, Republic of" ~ "South Korea",
       country == "St. Kitts and Nevis" ~ "Saint Kitts and Nevis",
       country == "St. Lucia" ~ "Saint Lucia",
       country == "Taiwan Province of China" ~ "Taiwan",
       country == "U.A.E." ~ "United Arab Emirates",
-      TRUE ~ country,
+      TRUE ~ as.character(country),
     )
     ) %>%
   #' remove unnecessary strings after comma
@@ -44,7 +45,8 @@ pwt <- haven::read_dta("./data/pwt100.dta") %>%
                              country == "D.R. of the Congo" ~ "Congo D.R.",
                              country == "Lao People's DR" ~ "Laos",
                              country == "North Macedonia" ~ "Macedonia",
-                             country == "Republic of Korea" ~ "Korea",
+                             country == "Republic of Korea" ~ "South Korea",
+                             country == "Korea" ~ "South Korea",
                              country == "Republic of Moldova" ~ "Moldova",
                              country == "Syrian Arab Republic" ~ "Syria",
                              country == "Viet Nam" ~ "Vietnam",
@@ -97,14 +99,14 @@ pwt_vars <- c("cgdpe",
 pwt_subset <- select(pwt, year, countrycode, country, all_of(pwt_vars))
 
 
-df <- left_join(df, pwt_subset, by = c("year", "country", "countrycode")) %>% 
+dataset <- left_join(df, pwt_subset) %>%
   arrange(countrycode, year) %>% 
   #' IMF does not have for 2020
-  filter(year < 2020) %>% 
+  filter(year < 2020) %>%
   #' remove decimal scaling of variables
   mutate(across(c("pop", "emp", "cgdpe", "cgdpo", "rgdpe", "rgdpo"), ~ .x*1e6))
 
-write_csv(df, "./data/merged_debt.csv")
+write_csv(dataset, "./data/merged_debt.csv")
 write_csv(rejects, "./data/excluded_countries.csv")
 
 rm(list = ls())
