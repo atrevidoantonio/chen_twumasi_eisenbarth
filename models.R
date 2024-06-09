@@ -153,7 +153,8 @@ rgdpc_missing <-
 dataset <-
   dataset |>
   filter(!iso %in% gdp_missing) |>
-  filter(!iso %in% rgdpc_missing)
+  filter(!iso %in% rgdpc_missing) |>
+  filter(country %in% dataset_countries)
 
 dataset <- mutate(dataset, rgdpc_imputed = imputeTS:::na_interpolation(rgdpc), .by = iso)
 
@@ -170,10 +171,9 @@ chudik_df |>
   ggplot(aes(x = value, color = name)) +
   stat_density(geom = "line", position = "identity") +
   scale_x_continuous(labels = scales::percent_format(), guide = "axis_minor") +
-  scale_color_manual(values = c("darkgrey", magenta), labels = c("Original", "Imputed")) +
+  scale_color_manual(values = c("darkgrey", saffron), labels = c("Original", "Imputed")) +
   labs(x = "Debt", y = "Density", color = "") +
   theme_clean()
-
 
 chudik_df |>
   select(year, country, gdp, gdp_capita) |>
@@ -181,7 +181,7 @@ chudik_df |>
   ggplot(aes(x = value, color = name)) +
   stat_density(geom = "line", position = "identity") +
   scale_x_continuous(labels = scales::percent_format(), guide = "axis_minor") +
-  scale_color_manual(values = c("darkgrey", magenta), labels = c("Original", "Imputed")) +
+  scale_color_manual(values = c("darkgrey", saffron), labels = c("Original", "Imputed")) +
   labs(x = "Debt", y = "Density", color = "") +
   theme_clean()
 
@@ -192,7 +192,7 @@ dataset |>
   ggplot(aes(x = value, color = name)) +
   stat_density(geom = "line", position = "identity") +
   scale_x_continuous(labels = scales::percent_format(), guide = "axis_minor") +
-  scale_color_manual(values = c(onyx, magenta), labels = c("Original", "Imputed")) +
+  scale_color_manual(values = c(onyx, saffron), labels = c("Original", "Imputed")) +
   labs(x = "GDP Per-Capita", y = "Density", color = "") +
   theme_clean()
 
@@ -210,6 +210,34 @@ dataset <-
   left_join(monetary) |>
   filter(year >= 1973)
 
+dataset <- mutate(dataset, gini_imputed = imputeTS::na_kalman(gini, model = "StructTS", smooth = TRUE, type = "trend"), .by = country)
+
+dataset |>
+  filter(year >= 1973) |>
+  select(year, country, gini, gini_imputed) |>
+  pivot_longer(cols = c(gini, gini_imputed)) |>
+  ggplot(aes(x = value, color = name)) +
+  stat_density(geom = "line", position = "identity") +
+  scale_x_continuous(labels = scales::number_format(), guide = "axis_minor") +
+  scale_color_manual(values = c(onyx, saffron), labels = c("Original", "Imputed")) +
+  labs(x = "Gini", y = "Density", color = "") +
+  theme_clean()
+
+dataset |>
+  filter(year >= 1973) |>
+  select(year, country, debt_imp, gini_imputed) |>
+  ggplot(aes(x = debt_imp, y = gini_imputed)) +
+  geom_jitter() +
+  labs(x = "Gini", y = "Density", color = "") +
+  theme_clean()
+
+dataset <-
+dataset |>
+  select(-population) |>
+  left_join(wb_population, join_by(iso == country_code, year == year))
+
+write_csv(dataset, "final_dataset.csv")
+
 p_df <- plm::pdata.frame(dataset, index = c("year", "country"))
 
 upper_mid <- filter(dataset, income_group == "Upper middle income")
@@ -217,7 +245,15 @@ high <- filter(dataset, income_group == "High income")
 low <- filter(dataset, income_group == "Low income")
 lower_mid <- filter(dataset, income_group == "Lower middle income")
 
-fit1 <- lm_robust(gdp ~ debt_imp + pl_x + pl_m + independence_dummy + us_pegger_dummy , data = dataset, fixed_effects =  ~ country + year)
+summary(lm_robust(log(gini_imputed) ~ debt_imp + gdp + lag(gdp) + gdp*debt_imp, data = dataset, fixed_effects =  ~ country + year, se_type = "stata", weights =  population, clusters = country))
+summary(lm_robust(log(gini_imputed) ~ debt_imp + gdp + lag(gdp) + gdp*debt_imp, data = upper_mid, fixed_effects =  ~ country + year, se_type = "stata", weights =  population, clusters = country))
+summary(lm_robust(log(gini_imputed) ~ debt_imp + gdp + lag(gdp) + gdp*debt_imp, data = high, fixed_effects =  ~ country + year, se_type = "stata", weights =  population, clusters = country))
+summary(lm_robust(log(gini_imputed) ~ debt_imp + gdp + lag(gdp) + gdp*debt_imp, data = low, fixed_effects =  ~ country + year, se_type = "stata", weights =  population, clusters = country))
+summary(lm_robust(log(gini_imputed) ~ debt_imp + gdp + lag(gdp) + gdp*debt_imp, data = lower_mid, fixed_effects =  ~ country + year, se_type = "stata", weights =  population, clusters = country))
+
+
+
+fit1 <- lm_robust(gini ~ debt_imp + pl_x + pl_m + independence_dummy + us_pegger_dummy , data = dataset, fixed_effects =  ~ country + year)
 fit2 <- lm_robust(gdp ~ debt_imp + pl_x + pl_m + independence_dummy + us_pegger_dummy, data = upper_mid, fixed_effects =  ~ country + year)
 fit3 <- lm_robust(gdp ~ debt_imp + pl_x + pl_m + independence_dummy + us_pegger_dummy, data = high, fixed_effects =  ~ country + year)
 fit4 <- lm_robust(gdp ~ debt_imp + pl_x + pl_m + independence_dummy + us_pegger_dummy, data = low, fixed_effects =  ~ country + year)

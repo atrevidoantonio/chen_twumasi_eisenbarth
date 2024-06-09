@@ -5,6 +5,17 @@ gini <- read_dta("C:/Users/ageis/Downloads/swiid9_6.dta") |>
   summarize(gini = mean(value), .by = c(country, year)) |>
   complete(country, year)
 
+gini_countries <-
+gini |>
+  distinct(country) |>
+  mutate(match = TRUE) 
+
+dataset_countries <-
+dataset |>
+  distinct(country) |>
+  mutate(inclued = TRUE) |>
+  left_join(gini_countries)
+
 missing_gini <-
   gini |>
   filter(year >= 1980) |>
@@ -17,7 +28,17 @@ included <-
   distinct(country) |>
   as_vector()
 
+included
 
-final_gini <- gini |> filter(country %in% included, year >= 1980)
 
-distinct(final_gini, country)
+final_gini <- gini |> filter(country %in% included, year >= 1980) |>
+  mutate(
+    country = case_when(
+      country == "Côte d'Ivoire" ~ "Cote d'Ivoire",
+      country == "Congo-Kinshasa" ~ "Congo",
+      country == "Korea" ~ "South Korea",
+      TRUE ~ as.character(country)
+    )
+  )
+
+ distinct(final_gini, country)

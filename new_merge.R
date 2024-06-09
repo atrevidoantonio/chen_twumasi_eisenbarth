@@ -80,7 +80,7 @@ data_df |>
   ggplot(aes(x = value, color = name)) +
   stat_density(geom = "line", position = "identity") +
   scale_x_continuous(labels = scales::percent_format(), guide = "axis_minor") +
-  scale_color_manual(values = c("darkgrey", redwood), labels = c("Original", "Imputed")) +
+  scale_color_manual(values = c("darkgrey", saffron), labels = c("Original", "Imputed")) +
   labs(x = "Debt", y = "Density", color = "") +
   theme_clean()
 
@@ -173,7 +173,7 @@ chudik_df |>
   ggplot(aes(x = value, color = name)) +
   stat_density(geom = "line", position = "identity") +
   scale_x_continuous(labels = scales::percent_format(), guide = "axis_minor") +
-  scale_color_manual(values = c("darkgrey", magenta), labels = c("Original", "Imputed")) +
+  scale_color_manual(values = c("darkgrey", saffron), labels = c("Original", "Imputed")) +
   labs(x = "Debt", y = "Density", color = "") +
   theme_clean()
 
@@ -227,7 +227,7 @@ chudik_data |>
   ggplot(aes(x = value, color = name)) +
   stat_density(geom = "line", position = "identity") +
   scale_x_continuous(labels = scales::percent_format(), guide = "axis_minor") +
-  scale_color_manual(values = c("darkgrey", magenta), labels = c("Original", "Imputed")) +
+  scale_color_manual(values = c("darkgrey", saffron), labels = c("Original", "Imputed")) +
   labs(x = "Debt", y = "Density", color = "") +
   theme_clean()
 

@@ -62,7 +62,7 @@ theme_clean <- function(...) {
       axis.line = element_line(linewidth = 0.25, colour = "black"),
       legend.title = element_text(size = 10, face = "plain"),
       legend.key = element_rect(fill = NA, color = NA),
-      text = element_text(color = "black", family = "Arial Narrow", size = 10),
+      text = element_text(color = "black", family = "Arial", size = 10),
       strip.background = element_rect(color = NA),
       plot.background = element_rect(color = NA),
       axis.ticks.length = unit(0.20, "cm"),
@@ -79,7 +79,7 @@ theme_grid <- function(...) {
       legend.key = element_rect(fill = NA),
       panel.border = element_blank(),
       legend.title = element_text(size = 10, face = "plain"),
-      text = element_text(family = "Franklin Gothic Book", color = "darkgrey"),
+      text = element_text(family = "Arial", color = "darkgrey"),
       plot.background = element_rect(fill = "transparent", color = NA),
       strip.background = element_rect(fill = "transparent", color = NA),
       strip.text = element_text(colour = 'black')

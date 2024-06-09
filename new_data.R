@@ -37,5 +37,3 @@ linear_fits <-
 
 write_csv(linear_fits, "Linear Fits.csv")
 
-full_data |>
-  distin
